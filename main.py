@@ -28,7 +28,7 @@ def neplanRequest():
 
 
     ####Logica aquí
-    area = base*altura
+    area = base + altura
 
     ####3estructura de la respuesta
     response = {
