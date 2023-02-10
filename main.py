@@ -1,3 +1,4 @@
+# coding=utf-8
 from flask import Blueprint, render_template, request, flash, redirect, url_for, Flask,jsonify,redirect, make_response
 
 import json
