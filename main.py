@@ -6,30 +6,30 @@ import json
 app = Flask(__name__)
 
 
-#metodos de prueba 
-# @app.route("/")
 
-# def hello_world():
-#     return "<p>Hello, wolcome to app flask microrred 360 !</p>"
+@app.route("/")
 
-# @app.route("/foo")
-# def neplanRequest():
-#     return "Welcome to NEPLAN"
+def hello_world():
+    return "<p>Hello, wolcome to app flask microrred 360 !</p>"
+
+@app.route("/foo")
+def neplanRequest1():
+    return "Welcome to NEPLAN"
 
 @app.route("/calculator" , methods = ['POST'])
 def neplanRequest():
     print("**********")
-    #lectura de datos
+    ####lectura de datos
     jsonInput = request.get_json()
     base = jsonInput['base']
     altura = jsonInput['altura']
 
 
 
-    #Logica aquí
+    ####Logica aquí
     area = base*altura
 
-    #estructura de la respuesta
+    ####3estructura de la respuesta
     response = {
         "area rectangulo": area
     }
